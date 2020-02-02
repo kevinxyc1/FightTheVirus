@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="min-width: 100%;">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flask for Data Science</title>
+      <!-- Custom styles for this template -->
+      <link  rel="stylesheet" href="{{ url_for('static', filename='css/logo-nav.css') }}">
+
+    <!-- Bootstrap core CSS -->
+    <link  rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container" style="position: relative; right: 30px;">
+        <a class="navbar-brand" href="../titanic">
+        <img src="{{ url_for('static', filename='resources/logo.jpeg')   }}" width="30" height="30" alt="">
+          <img src="{{ url_for('static', filename='resources/title.png')   }}" width="200" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            </li>
+            <li class="nav-item">
+                <a href="../tips" style="color: lightgreen; margin:10px;">Tips</a>
+                <a href="../stat" style="color: lightgreen; margin:10px;">Statistics</a>
+                <a href="../titanic" style="color: lightgreen; margin:10px;">Prediction</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container2" style="background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-width: 100%; height: 150%;">
+    
+    <div style="min-width: 100%; height: 33.3%;">
+        <h1 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px;">Prevention</h1>
+        <h5 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px;">There is currently no vaccine to prevent 2019-nCoV infection. The best way to prevent infection is to avoid being exposed to this virus. However, as a reminder, CDC always recommends everyday preventive actions to help prevent the spread of respiratory viruses, including:<br>
+            - Wash your hands often with soap and water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at least 60% alcohol if soap and water are not available.<br>
+            - Avoid touching your eyes, nose, and mouth with unwashed hands.<br>
+            - Avoid close contact with people who are sick.<br>
+            - Stay home when you are sick.<br>
+            - Cover your cough or sneeze with a tissue, then throw the tissue in the trash.<br>
+            - Clean and disinfect frequently touched objects and surfaces.<br>
+        </h5>
+    </div>
+    <br>
+    <br>
+    <div style="min-width: 100%; height: 33.3%;">
+        <h1 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px;">How 2019-nCoV Spreads</h1>
+        <h5 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px;">Much is unknown about how 2019-nCoV, a new coronavirus, spreads. Current knowledge is largely based on what is known about similar coronaviruses. Coronaviruses are a large family of viruses that are common in many different species of animals, including camels, cattle, cats, and bats. Rarely, animal coronaviruses can infect people and then spread between people such as with MERS, SARS, and now with 2019-nCoV.
+            Most often, spread from person-to-person happens among close contacts (about 6 feet). Person-to-person spread is thought to occur mainly via respiratory droplets produced when an infected person coughs or sneezes, similar to how influenza and other respiratory pathogens spread. These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs. It’s currently unclear if a person can get 2019-nCoV by touching a surface or object that has the virus on it and then touching their own mouth, nose, or possibly their eyes.
+            Typically, with most respiratory viruses, people are thought to be most contagious when they are most symptomatic (the sickest). With 2019-nCoV, however, there have been reportsexternal icon of spread from an infected patient with no symptoms to a close contact.
+            It’s important to note that how easily a virus spreads person-to-person can vary. Some viruses are highly contagious (like measles), while other viruses are less so. There is much more to learn about the transmissibility, severity, and other features associated with 2019-nCoV and investigations are ongoing. This information will further inform the risk assessment. Read the latest 2019 Novel Coronavirus, Wuhan, China situation summary.
+        </h5>
+    </div>
+    <br>
+    <br>
+    <div style="min-width: 100%; height: 33.3%;">
+        <h1 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px;">What to do if you are sick with 2019 Novel Coronavirus (2019-nCoV)</h1>
+        <h5 style="position: relative; top: 50px; padding-left: 40px; padding-right: 40px; padding-bottom: 70px;">
+            - Stay home except to get medical care <br>
+            - Separate yourself from other people in your home <br>
+            - Call ahead before visiting your doctor <br>
+            - Wear a facemask <br>
+            - Cover your coughs and sneezes <br>
+            - Wash your hands <br>
+            - Avoid sharing household items <br>
+            - Monitor your symptoms <br>
+            - Avoid contact with pets and other animals <br>
+        </h5>
+    </div>
+
+    </div>
+
+
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper/popper.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
+

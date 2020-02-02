@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" style="min-width: 100%;">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flask for Data Science</title>
+      <!-- Custom styles for this template -->
+      <link  rel="stylesheet" href="{{ url_for('static', filename='css/logo-nav.css') }}">
+
+    <!-- Bootstrap core CSS -->
+    <link  rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container" style="position: relative; right: 30px;">
+        <a class="navbar-brand" href="../titanic">
+        <img src="{{ url_for('static', filename='resources/logo.jpeg')   }}" width="30" height="30" alt="">
+          <img src="{{ url_for('static', filename='resources/title.png')   }}" width="200" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            </li>
+            <li class="nav-item">
+                <a href="../tips" style="color: lightgreen; margin:10px;">Tips</a>
+                <a href="../stat" style="color: lightgreen; margin:10px;">Statistics</a>
+                <a href="../titanic" style="color: lightgreen; margin:10px;">Prediction</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    
+
+<script type="text/javascript">
+    var i = 19544;
+    function increment1() {
+        i++;
+        document.getElementById('suspect').innerHTML = i;
+    }
+    setInterval('increment1()', 5000);
+
+    var j = 14411;
+    function increment2() {
+        j++;
+        document.getElementById('confirm').innerHTML = j;
+    }
+    setInterval('increment2()', 12000);
+</script>
+
+
+    <div class="container2" style="background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-width: 100%; height: 900px;">
+    
+    <div>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 90px;" id="confirm">14411</h1>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 90px;" id="confirmed">Confimed Cases</h1>
+    </div>
+    <div>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 120px;" id="suspect">19544</h1>
+        <br>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 90px;" id="suspected">Suspected Cases</h1>
+    </div>
+    <div>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 150px;">305 Deaths</h1>
+    </div>
+    <div>
+        <h1 style="font-size: 80px; color:black; text-align: center; position: relative; top: 180px;">328 Recovers</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    </div>
+
+
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper/popper.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
+
