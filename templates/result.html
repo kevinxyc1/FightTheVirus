@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flask for Data Science</title>
+      <!-- Custom styles for this template -->
+      <link  rel="stylesheet" href="{{ url_for('static', filename='css/logo-nav.css') }}">
+
+    <!-- Bootstrap core CSS -->
+    <link  rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container" style="position: relative; right: 30px;">
+        <a class="navbar-brand" href="../result">
+        <img src="{{ url_for('static', filename='resources/logo.jpeg')   }}" width="30" height="30" alt="">
+          <img src="{{ url_for('static', filename='resources/title.png')   }}" width="200" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            </li>
+            <li class="nav-item">
+                <a href="../tips" style="color: lightgreen; margin:10px;">Tips</a>
+                <a href="../stat" style="color: lightgreen; margin:10px;">Statistics</a>
+                <a href="../result" style="color: lightgreen; margin:10px;">Prediction</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" style="background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-width: 100%; min-height: 100%; position: relative; bottom: 50px;">
+    <br>
+    <br>
+    <br>
+      <h1 class="mt-5" style="text-align: center; font-size: 70px;">Coronavirus Infection Prediction</h1>
+        <p style="text-align: center; font-size: 40px;">This model predicts the probability of getting infected by 2019 nCov (aka. Coronavirus) using a logistic regression model trained on actual data from the patients in Wuhan.</p>
+        <br>
+        <div style="align-items: center; font-weight: 300; font-style: bold;">
+          <!-- Result presentation goes here -->
+          {% if data.prediction %}
+              <b><h1 style="text-align: center; font-size: 50px; color:red;">{{data.prediction}}</h1></b>
+              <br>
+              <h5 style="text-align: center;">Gender: {{data.form.predict_sex}}</h5>
+              <h5 style="text-align: center;">Age: {{data.form.predict_age}}</h5>
+              <h5 style="text-align: center;">Fever: {{data.form.predict_fever}}</h5>
+              <h5 style="text-align: center;">Cough: {{data.form.predict_cough}}</h5>
+              <h5 style="text-align: center;">Sputum: {{data.form.predict_sputum}}</h5>
+              <h5 style="text-align: center;">Headache: {{data.form.predict_headache}}</h5>
+              <h5 style="text-align: center;">Been to Wuhan in past 40 days: {{data.form.predict_wuhan}}</h5>
+              <h5 style="text-align: center;">Been to China in past 40 days: {{data.form.predict_china}}</h5>
+              <h5 style="text-align: center;">Breathing Difficulty: {{data.form.predict_breath}}</h5>
+              <br>
+          {% endif %}
+      </div>
+      <br>
+      <br>
+        <div class="row">
+            <div class="col-lg-6"style="width: 100px;">
+                <!-- The web form goes here -->
+                <form action="/result" method="post" id="result_predict" style="font-size: 20px;">
+                  <div>
+                     <label for="name" style="position: relative; left: 450px;">Gender: M or F </label>
+                     <input type="text" id="sex" name="predict_sex" style="position: relative; left: 525px;">
+                 </div>
+                 
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Age: 0 - 100 </label>
+                     <input type="text" id="age" name="predict_age" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Fever: Yes (1) or No (0) </label>
+                     <input type="text" id="fever" name="predict_fever" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Cough: Yes (1) or No (0) </label>
+                     <input type="text" id="cough" name="predict_cough" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Sputum: Yes (1) or No (0)</label>
+                     <input type="text" id="sputum" name="predict_sputum" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Headache: Yes (1) or No (0) </label>
+                     <input type="text" id="headache" name="predict_headache" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Been to Wuhan in past 40 days: Yes (1) or No (0) </label>
+                     <input type="text" id="wuhan" name="predict_wuhan" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Been to China in past 40 days: Yes (1) or No (0) </label>
+                     <input type="text" id="china" name="predict_china" style="position: relative; left: 525px;">
+                 </div>
+                 <div>
+                     <label for="name" style="position: relative; left: 450px;">Breathing Difficulty: Yes (1) or No (0) </label>
+                     <input type="text" id="breath" name="predict_breath" style="position: relative; left: 525px;">
+                 </div>
+             </form>
+             <br>
+            <br>
+
+            
+            <button class="btn" type="submit" form="result_predict" value="Submit" style="
+                background-color: darkgreen;  color: white; padding: 30px 60px; text-align: center; text-decoration: none; font-size: 25px; align-items: center; position: relative; left: 600px;">Predict</button></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/popper/popper.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
+
