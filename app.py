@@ -55,7 +55,7 @@ def titanic():
 #         # get prediction
         prediction = L1_logistic.predict_proba(input_data.reshape(1, -1))
         prediction = prediction[0][1] # probability of carrying coronavirus
-        data['prediction'] = '{:.1f}% Chance of Carrying Coronavirus'.format(prediction * 20)
+        data['prediction'] = '{:.1f}% Chance of Carrying Coronavirus'.format(prediction * 100 - 10)
         print(data)
     return render_template('titanic.html', data=data)
 
