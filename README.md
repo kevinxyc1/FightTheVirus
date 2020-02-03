@@ -13,6 +13,16 @@ FightTheVirus is available on both web and IOS platform. The main mission is to 
 # How we built it
 We built the app both on the website and mobile. For the web app, we implemented the Python machine learning library scikit-learn for the training of the dataset. The model is Logistic Regression which uses the logistic function to model a binary dependent variable and output the probability from 0 to 1 in the form of a sigmoid/softmax function. Numpy and Pandas were also used in preprocessing data. To integrate the machine learning backend with our web front end, we used flask to connect everything together. The front end website was designed with HTML, CSS, Bootstrap and JavaScript which blended well with flask and Python. For the mobile app, we made an IOS prototype that has all of the functions on the website.
 
+# Training
+We only have limited amount of data (150 patients) and here is one of our training results:
+
+              precision    recall  f1-score   support
+    Negative       1.00      0.24      0.39        25
+    Positive       0.17      1.00      0.30         4
+    accuracy                           0.34        29
+   macro avg       0.59      0.62      0.34        29
+weighted avg       0.89      0.34      0.37        29
+
 # Challenges we ran into
 Since our team is only made of two members and we are both relatively new to machine learning, it was somewhat difficult for us to start. Without any backend experience, we learned flask in a short period amount of time and successfully implemented it in the fusion of frontend and backend. The machine learning part was also tricky to start but with tons of failures, we still manage to finish our model in processing patient attributes and outputting probabilities.
 
