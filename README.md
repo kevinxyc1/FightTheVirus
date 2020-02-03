@@ -20,8 +20,8 @@ We only have limited amount of data (150 patients) and here is one of our traini
     Negative       1.00      0.24      0.39        25
     Positive       0.17      1.00      0.30         4
     accuracy                           0.34        29
-   macro avg       0.59      0.62      0.34        29
-weighted avg       0.89      0.34      0.37        29
+    macro avg       0.59      0.62      0.34        29
+    weighted avg       0.89      0.34      0.37        29
 
 # Challenges we ran into
 Since our team is only made of two members and we are both relatively new to machine learning, it was somewhat difficult for us to start. Without any backend experience, we learned flask in a short period amount of time and successfully implemented it in the fusion of frontend and backend. The machine learning part was also tricky to start but with tons of failures, we still manage to finish our model in processing patient attributes and outputting probabilities.
