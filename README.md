@@ -1,7 +1,7 @@
 # FightTheVirus 
--- frontend: HTML, CSS, JavaScript, BootStrap
--- backend: Flask
--- machine learning: Python, NumPy, Pandas, Scikit-learn
+frontend: HTML, CSS, JavaScript, BootStrap\n
+backend: Flask\n
+machine learning: Python, NumPy, Pandas, Scikit-learn\n
 -- model: logistic regression
 
 # Inspiration
