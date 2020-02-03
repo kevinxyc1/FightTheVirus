@@ -15,6 +15,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+# ------------------------------------ #
+# -------- DATA SCIENCE TIME --------- #
+# ------------------------------------ #
+
 @app.route('/tips')
 def tips():
     return render_template('tips.html')
@@ -23,8 +27,8 @@ def tips():
 def stat():
     return render_template('stat.html')
 
-@app.route('/titanic', methods=['GET','POST'])
-def titanic():
+@app.route('/result', methods=['GET','POST'])
+def result():
     data = {}   # data object to be passed back to the web page
     if request.form:
         # get the input data
@@ -53,7 +57,7 @@ def titanic():
         prediction = prediction[0][1] # probability of carrying coronavirus
         data['prediction'] = '{:.1f}% Chance of Carrying Coronavirus'.format(prediction * 100 - 10)
         print(data)
-    return render_template('titanic.html', data=data)
+    return render_template('result.html', data=data)
 
 if __name__ == '__main__':
     # build a basic model for coronavirus infection rate
