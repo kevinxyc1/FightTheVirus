@@ -15,10 +15,6 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# ------------------------------------ #
-# -------- DATA SCIENCE TIME --------- #
-# ------------------------------------ #
-
 @app.route('/tips')
 def tips():
     return render_template('tips.html')
@@ -61,7 +57,7 @@ def titanic():
 
 if __name__ == '__main__':
     # build a basic model for coronavirus infection rate
-    virus_df = pd.read_csv('data/virus.tsv',encoding="utf-8",sep='\t')
+    virus_df = pd.read_csv('data/final.tsv',encoding="utf-8",sep='\t')
     virus_df['sex'].replace({"male": 0, "female": 1}, inplace=True)
 
     train_df, test_df = train_test_split(virus_df)
