@@ -1,8 +1,8 @@
 # FightTheVirus 
-frontend: HTML, CSS, JavaScript, BootStrap\n
-backend: Flask\n
-machine learning: Python, NumPy, Pandas, Scikit-learn\n
--- model: logistic regression
+-- frontend: HTML, CSS, JavaScript, BootStrap   
+-- backend: Flask   
+-- machine learning: Python, NumPy, Pandas, Scikit-learn  
+-- model: logistic regression  
 
 # Inspiration
 Coronavirus, our new enemy, has continued to infect us and threaten our lives. According to Baidu data, 1.06 people in China got infected by the Coronavirus every minute (Feb. 1. 2020), and this number has continued to rise. In Canada, there had been 4 cases confirmed which disturb the lives of many civilians. If there is no action to prevent it, humanity is at stake. Now, it is time for us to stand up against it and use the power of machine learning.
